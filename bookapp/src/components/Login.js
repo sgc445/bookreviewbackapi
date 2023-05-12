@@ -26,7 +26,7 @@ class Login extends React.Component {
     // perform login logic here
     const { username, password } = this.state;
 
-    axios.post('http://192.168.0.18:8000/login/', { username, password })
+    axios.post('http://localhost:8000/login/', { username, password })
       .then(function (response) {
         console.log(":::::::::::::::",Object.keys(response.data).length);
         if (Object.keys(response.data).length=== 2) {
