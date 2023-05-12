@@ -16,7 +16,7 @@ class Home extends React.Component {
 
     componentDidMount() {
           axios
-          .get("http://192.168.0.18:8000/books/")
+          .get("http://localhost:8000/books/")
           .then((response) => {
             this.setState({ jsonData: response.data, isLoading: false });
           })
