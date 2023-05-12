@@ -32,7 +32,7 @@ class Signup extends React.Component {
 
     const { username, password ,email} = this.state;
 
-    axios.post('http://192.168.0.18:8000/create_user/', { username, password,email })
+    axios.post('http://localhost:8000/create_user/', { username, password,email })
       .then(function (response) {
         console.log(":::::::::::::::",Object.keys(response.data).length);
         if (Object.keys(response.data).length=== 1) {
